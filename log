@@ -285,3 +285,30 @@ Thu 11 May 2023 05:07:57 PM UTC:
  tests:  5|2
 total_score: 35/70
 433493d
+Thu 11 May 2023 05:17:57 PM UTC: 
+ heap.c | 29 +++++++++++++++++++++++++++--
+ 1 file changed, 27 insertions(+), 2 deletions(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_pop’:
+heap.c:60:25: error: ‘heapArray’ undeclared (first use in this function)
+   60 |   pq->heapArray[0] = pq-heapArray[pq->size]
+      |                         ^~~~~~~~~
+heap.c:60:25: note: each undeclared identifier is reported only once for each function it appears in
+heap.c:60:44: error: expected ‘;’ before ‘while’
+   60 |   pq->heapArray[0] = pq-heapArray[pq->size]
+      |                                            ^
+      |                                            ;
+   61 |   while(pq->heapArray[pos] > pq->heapArray[hijo1] && pq->heapArray[pos] > pq->heapArray[hijo2])
+      |   ~~~~~                                     
+heap.c:59:12: error: unused variable ‘aux’ [-Werror=unused-variable]
+   59 |   heapElem aux;
+      |            ^~~
+heap.c:58:7: error: unused variable ‘hijo2’ [-Werror=unused-variable]
+   58 |   int hijo2 = 2*pos+2;
+      |       ^~~~~
+heap.c:57:7: error: unused variable ‘hijo1’ [-Werror=unused-variable]
+   57 |   int hijo1 = 2*pos+1;
+      |       ^~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+4819f38

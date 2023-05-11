@@ -57,7 +57,7 @@ void heap_pop(Heap* pq)
   int hijo1 = 2*pos+1;
   int hijo2 = 2*pos+2;
   heapElem aux;
-  pq->heapArray[0] = pq->heapArray[pq->size]
+  pq->heapArray[0] = pq->heapArray[pq->size];
   while(pq->heapArray[pos] > pq->heapArray[hijo1] && pq->heapArray[pos] > pq->heapArray[hijo2])
   {
     if(hijo1 > hijo2)

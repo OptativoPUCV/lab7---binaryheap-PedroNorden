@@ -156,3 +156,16 @@ Thu 11 May 2023 04:41:43 PM UTC:
  tests:  2|2
 total_score: 20/70
 6df2f09
+Thu 11 May 2023 04:43:55 PM UTC: 
+ heap.c | 4 ++++
+ 1 file changed, 4 insertions(+)
+In file included from test.c:4:
+heap.c: In function ‘heap_push’:
+heap.c:31:37: error: expected ‘;’ before ‘}’ token
+   31 |      pq = realloc(pq, pq->capac*2+1)
+      |                                     ^
+      |                                     ;
+   32 |   }
+      |   ~                                  
+Compilation failed
+b4bc620

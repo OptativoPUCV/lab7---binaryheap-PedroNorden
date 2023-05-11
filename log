@@ -8,3 +8,14 @@ Thu 11 May 2023 04:30:49 PM UTC:
  tests:  1|3
 total_score: 10/70
 cc6fed1
+Thu 11 May 2023 04:31:01 PM UTC: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+test.c: In function ‘createHeap’:
+heap.c:38:24: error: ‘nuevoHeap’ is used uninitialized in this function [-Werror=uninitialized]
+   38 |   nuevoHeap->heapArray = malloc(3 * sizeof(Heap));
+      |   ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+89b2ec2

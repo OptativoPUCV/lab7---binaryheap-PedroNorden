@@ -181,3 +181,16 @@ Thu 11 May 2023 04:47:34 PM UTC:
  tests:  2|2
 total_score: 20/70
 80f3431
+Thu 11 May 2023 04:49:34 PM UTC: 
+ heap.c | 5 +++++
+ 1 file changed, 5 insertions(+)
+In file included from test.c:4:
+heap.c: In function ‘heap_push’:
+heap.c:35:21: error: invalid type argument of ‘->’ (have ‘heapElem’ {aka ‘struct nodo’})
+   35 |     pq->heapArray[0]->data = data;
+      |                     ^~
+heap.c:36:21: error: invalid type argument of ‘->’ (have ‘heapElem’ {aka ‘struct nodo’})
+   36 |     pq->heapArray[0]->priority = priority;
+      |                     ^~
+Compilation failed
+fee3452

@@ -64,7 +64,7 @@ void heap_pop(Heap* pq)
     {
       aux = pq->heapArray[pos];
       pq->heapArray[pos] = pq->heapArray[hijo1];
-      pq-heapArray[hijo1] = aux;
+      pq->heapArray[hijo1] = aux;
       pos = hijo1;
       hijo1 = 2*pos+1;
     }
@@ -72,7 +72,7 @@ void heap_pop(Heap* pq)
     {
       aux = pq->heapArray[pos];
       pq->heapArray[pos] = pq->heapArray[hijo2];
-      pq-heapArray[hijo2] = aux;
+      pq->heapArray[hijo2] = aux;
       pos = hijo2;
       hijo2 = 2*pos+2;
     }

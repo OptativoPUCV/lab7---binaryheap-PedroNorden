@@ -116,3 +116,13 @@ heap.c:21:31: error: invalid type argument of ‘->’ (have ‘heapElem’ {aka
       |                               ^~
 Compilation failed
 11aa9f1
+Thu 11 May 2023 04:39:53 PM UTC: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_top’:
+heap.c:21:15: error: incompatible types when initializing type ‘void *’ using type ‘heapElem’ {aka ‘struct nodo’}
+   21 |   void *top = pq->heapArray[0];
+      |               ^~
+Compilation failed
+9a1f10e

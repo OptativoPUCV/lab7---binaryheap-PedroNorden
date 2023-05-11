@@ -126,3 +126,15 @@ heap.c:21:15: error: incompatible types when initializing type ‘void *’ usin
       |               ^~
 Compilation failed
 9a1f10e
+Thu 11 May 2023 04:40:29 PM UTC: 
+ heap.c | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_top’:
+heap.c:21:23: error: invalid operands to binary == (have ‘heapElem’ {aka ‘struct nodo’} and ‘void *’)
+   21 |   if(pq->heapArray[0] == NULL)
+      |      ~~~~~~~~~~~~~~~~ ^~
+      |                   |
+      |                   heapElem {aka struct nodo}
+Compilation failed
+487bdad

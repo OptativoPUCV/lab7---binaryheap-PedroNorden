@@ -106,3 +106,13 @@ heap.c:21:15: error: void value not ignored as it ought to be
 cc1: all warnings being treated as errors
 Compilation failed
 5dc08bb
+Thu 11 May 2023 04:39:21 PM UTC: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_top’:
+heap.c:21:31: error: invalid type argument of ‘->’ (have ‘heapElem’ {aka ‘struct nodo’})
+   21 |   void *top = pq->heapArray[0]->data;
+      |                               ^~
+Compilation failed
+11aa9f1

@@ -43,7 +43,7 @@ void heap_push(Heap* pq, void* data, int priority){
   while(1)
   {
     padre = pq->heapArray[(posicion-1)/2];
-    if(posicion mayor < padre) break;
+    if(posicion < padre) break;
     
   }
 }

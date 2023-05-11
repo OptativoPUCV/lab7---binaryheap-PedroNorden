@@ -224,3 +224,13 @@ heap.c:30:7: error: variable ‘padre’ set but not used [-Werror=unused-but-se
 cc1: all warnings being treated as errors
 Compilation failed
 0cc2b57
+Thu 11 May 2023 05:01:57 PM UTC: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_push’:
+heap.c:45:13: error: incompatible types when assigning to type ‘int’ from type ‘heapElem’ {aka ‘struct nodo’}
+   45 |     padre = pq->heapArray[(posicion-1)/2];
+      |             ^~
+Compilation failed
+843961f

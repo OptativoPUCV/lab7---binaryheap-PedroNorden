@@ -62,21 +62,18 @@ void heap_pop(Heap* pq)
   {
     int hijo1 = 2*pos+1;
     int hijo2 = 2*pos+2;
+    int mayor = 0;
     heapElem aux;
     if (hijo1 >= pq->size && hijo2 >= pq->size) break;
-    if(pq->heapArray[hijo1].priority < pq->heapArray[pos].priority)
+    if(pq->heapArray[hijo1].priority > pq->heapArray[hijo2].priority)
+      mayor = hijo1;
+    else mayor = hijo2;
+    if(pq->heapArray[mayor].priority < pq->heapArray[pos].priority)
     {
-      aux = pq->heapArray[hijo1];
-      pq->heapArray[hijo1] = pq->heapArray[pos];
+      aux = pq->heapArray[mayor];
+      pq->heapArray[mayor] = pq->heapArray[pos];
       pq->heapArray[pos] = aux;
-      pos = hijo1;
-    }
-    else if(pq->heapArray[hijo2].priority > pq->heapArray[pos].priority)
-    {
-      aux = pq->heapArray[hijo2];
-      pq->heapArray[hijo2] = pq->heapArray[pos];
-      pq->heapArray[pos] = aux;
-      pos = hijo2;
+      pos = mayor;
     }
     else break;
   }

@@ -78,6 +78,7 @@ void heap_pop(Heap* pq)
       pq->heapArray[pos] = aux;
       pos = hijo2;
     }
+    else break;
   }
 }
 
